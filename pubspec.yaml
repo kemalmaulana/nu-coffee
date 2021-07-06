@@ -63,8 +63,12 @@ flutter:
   fonts:
     - family: Franklin
       fonts:
-#        - asset: assets/fonts/Franklin_Gothic_Std_Extra_Condensed.otf
         - asset: assets/fonts/BebasNeue_Regular.otf
+#        - asset: assets/fonts/Franklin_Gothic_Std_Extra_Condensed.otf
+    - family: Avenir
+      fonts:
+        - asset: assets/fonts/AvenirLTStd_Roman.otf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

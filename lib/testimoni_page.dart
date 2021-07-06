@@ -7,6 +7,7 @@ class TestimoniPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var geom = MediaQuery.of(context).size;
     return Container(
+      width: geom.width,
       color: const Color.fromARGB(0xFF, 253, 250, 213),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -52,9 +53,11 @@ class TestimoniPage extends StatelessWidget {
                     color: Colors.black54,
                     width: geom.width*0.67,
                     padding: const EdgeInsets.all(20.0),
-                    child: Flexible(child: Text("Jika kamu salah satu penikmat kopi Robusta, jangan lewatkan untuk mencicipi kopi merek NU COFFEE ini. "
-                        +"Kopi robusta asli Kendal ini dibuat dari biji kopi kualitas terbaik sehingga rasa dan aromanya pasti disukai oleh siapa saja. "
-                        +"Untuk menikmati aroma harumnya, tuangkan air dengan suhu 70 derajat celcius saat menyeduh kopi ini.", style: _textStyleCaption(18, FontWeight.normal))),
+                    child: Row(
+                      children: [
+                        Flexible(child: Text("Jika kamu salah satu penikmat kopi Robusta, jangan lewatkan untuk mencicipi kopi merek NU COFFEE ini. Kopi robusta asli Kendal ini dibuat dari biji kopi kualitas terbaik sehingga rasa dan aromanya pasti disukai oleh siapa saja. Untuk menikmati aroma harumnya, tuangkan air dengan suhu 70 derajat celcius saat menyeduh kopi ini.", style: _textStyleCaption(18, FontWeight.w500)))
+                      ],
+                    ),
                   )
                 ],
               )
@@ -76,7 +79,11 @@ class TestimoniPage extends StatelessWidget {
                     color: Colors.black54,
                     width: geom.width*0.67,
                     padding: const EdgeInsets.all(20.0),
-                    child: Flexible(child: Text("Kopi Excelsa adalah jenis kopi yang telah dikenal sejak lama. Kamu bisa menikmati aroma dan rasa khas kopi ini dalam secangkir kopi murni NU Coffee. Untuk keamanan dan kualitasnya, tak perlu diragukan lagi. Kopi ini telah tersertifikasi oleh BPOM, SNI dan MUI sehingga aman dan halal diminum. Kopi ini dapat dinikmati dengan tambahan gula, susu atau krimmer. Selain itu juga tetap nikmat diseduh panas ataupun", style: _textStyleCaption(18, FontWeight.normal))),
+                    child: Row(
+                      children: [
+                        Flexible(child: Text("Kopi Excelsa adalah jenis kopi yang telah dikenal sejak lama. Kamu bisa menikmati aroma dan rasa khas kopi ini dalam secangkir kopi murni NU Coffee. Untuk keamanan dan kualitasnya, tak perlu diragukan lagi. Kopi ini telah tersertifikasi oleh BPOM, SNI dan MUI sehingga aman dan halal diminum. Kopi ini dapat dinikmati dengan tambahan gula, susu atau krimmer. Selain itu juga tetap nikmat diseduh panas ataupun", style: _textStyleCaption(18, FontWeight.w500)))
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -114,9 +121,9 @@ class TestimoniPage extends StatelessWidget {
 
   TextStyle _textStyleCaption(double size, FontWeight fw) {
     return TextStyle(
-        fontFamily: "Franklin",
+        fontFamily: "Avenir",
         fontSize: size,
         fontWeight: fw,
-        color: Colors.white);
+        color: const Color.fromARGB(0xFF, 253, 250, 213));
   }
 }

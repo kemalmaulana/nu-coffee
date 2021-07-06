@@ -232,7 +232,7 @@ class _MainPageState extends State<MainPage> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(12.0),
-                      child: Image.asset('assets/images/demo_coffee_1.jpeg', height: 200, width: 200),
+                      child: Image.asset('assets/images/demo_coffee_1.png', height: 200, width: 200),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -268,7 +268,29 @@ class _MainPageState extends State<MainPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/images/speciality_detail.png', height: 200, width: 400),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/pic_manual.png', fit: BoxFit.cover, height: 200, width: 300),
+                      Text("MANUAL", style: TextStyle(
+                        fontFamily: "Franklin",
+                        fontSize: 28
+                      ))
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/pic_artisan.png', fit: BoxFit.cover, height: 200, width: 300),
+                      Text("ARTISAN", style: TextStyle(
+                          fontFamily: "Franklin",
+                          fontSize: 28
+                      ))
+                    ],
+                  )
+
                 ],
               ),
             ],
