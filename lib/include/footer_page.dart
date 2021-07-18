@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nu_coffee/about/about_page.dart';
+import 'package:nu_coffee/home/home_page.dart';
+import 'package:nu_coffee/speciality/speciality_page.dart';
 
 class FooterPage extends StatefulWidget {
   const FooterPage({Key? key}) : super(key: key);
@@ -10,9 +13,7 @@ class FooterPage extends StatefulWidget {
 class _FooterPageState extends State<FooterPage> {
   @override
   Widget build(BuildContext context) {
-    var geom = MediaQuery
-        .of(context)
-        .size;
+    var geom = MediaQuery.of(context).size;
     return Container(
       // height: geom.height*0.25,
       height: 200,
@@ -32,13 +33,16 @@ class _FooterPageState extends State<FooterPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("NU COFFEE", style: _textStyle(28, FontWeight.bold)),
-                  Flexible(child: Text("NU COFFEE MERUPAKAN KOPI BUBUK ALAMI YG DI PRODUKSI OLEH PONPES ASSALAFIYAH ANNAHDLIYYAH YANG BERLOKASI DI CURUGSEWU PATEAN, KENDAL.", style: _textStyle(14, FontWeight.normal)))
+                  Flexible(
+                      child: Text(
+                          "NU COFFEE MERUPAKAN KOPI BUBUK ALAMI YG DI PRODUKSI OLEH PONPES ASSALAFIYAH ANNAHDLIYYAH YANG BERLOKASI DI CURUGSEWU PATEAN, KENDAL.",
+                          style: _textStyle(14, FontWeight.normal)))
                 ],
               ),
             ),
-            SizedBox(width: geom.width*0.3),
+            SizedBox(width: geom.width * 0.3),
             Container(
-              width: geom.width*0.20,
+              width: geom.width * 0.20,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,10 +51,48 @@ class _FooterPageState extends State<FooterPage> {
                   Divider(color: Colors.transparent),
                   Column(
                     children: [
-                      Text("TENTANG", style: _textStyle(14, FontWeight.normal)),
-                      Text("KOPI KAMI", style: _textStyle(14, FontWeight.normal)),
-                      Text("SPECIALITY", style: _textStyle(14, FontWeight.normal)),
-                      Text("KONTAK", style: _textStyle(14, FontWeight.normal))
+                      InkWell(
+                          child: Text("TENTANG",
+                              style: _textStyle(14, FontWeight.normal)),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AboutPage()),
+                            );
+                          }),
+                      InkWell(
+                        child: Text("KOPI KAMI",
+                            style: _textStyle(14, FontWeight.normal)),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
+                      ),
+                      InkWell(
+                        child: Text("SPECIALITY",
+                            style: _textStyle(14, FontWeight.normal)),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SpecialityPage()),
+                          );
+                        },
+                      ),
+                      InkWell(
+                        child: Text("KONTAK",
+                            style: _textStyle(14, FontWeight.normal)),
+                        onTap: () {
+                          final snackBar = SnackBar(
+                              content:
+                                  Text('Kontak currently on development...'));
+
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        },
+                      )
                     ],
                   )
                 ],
@@ -67,7 +109,6 @@ class _FooterPageState extends State<FooterPage> {
         fontFamily: "Franklin",
         fontSize: size,
         fontWeight: fw,
-        color: Colors.grey
-    );
+        color: Colors.grey);
   }
 }

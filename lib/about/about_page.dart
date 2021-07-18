@@ -92,7 +92,7 @@ class _AboutPageState extends State<AboutPage> {
                 Divider(color: Colors.transparent, height: 12),
                 Flexible(
                     child: Text(
-                        "NU Coffee merupakan kopi bubuk alami yang diproduksi oleh PONPES Assalafiyah Annahdliyyah yang berlokasi di Curugsewu, Patean, Kendal. NU Coffee memproduksi 3 jenis kopi bubuk, seperti kopi Excelsa, Arabica, dan Robusta. NU Coffee menjual produk mereka dengan fine grinding, dimana fine grind merupakan gilingan kopi yang halus.\n\n Penggunaan NU Coffee berasal dari PONPES yang berada di bawah PBNU. Tujuannya, agar produk kopi ini dapat menarik minat masyarakat Nahdlatul Ulama lebih dekat. Utamanya, agar NU bagian pusat mau memperhatikan produk yang mereka buat ini.",
+                        "NU Coffee merupakan kopi bubuk alami yang diproduksi oleh PONPES Assalafiyah Annahdliyyah yang berlokasi di Curugsewu, Patean, Kendal. NU Coffee memproduksi 3 jenis kopi bubuk, seperti kopi Excelsa, Arabica, dan Robusta. NU Coffee menjual produk mereka dengan fine grinding, dimana fine grind merupakan gilingan kopi yang halus.\n\nPenggunaan NU Coffee berasal dari PONPES yang berada di bawah PBNU. Tujuannya, agar produk kopi ini dapat menarik minat masyarakat Nahdlatul Ulama lebih dekat. Utamanya, agar NU bagian pusat mau memperhatikan produk yang mereka buat ini.",
                         style: _textStyleCaption(20, FontWeight.w600)))
               ],
             ),
@@ -116,7 +116,7 @@ class _AboutPageState extends State<AboutPage> {
                     Divider(color: Colors.transparent, height: 12),
                     Flexible(
                         child: Text(
-                            "NU Coffee memiliki kebun kopi pribadi yang mengembangkan varian kopi yang cukup lang- ka di pasaran, Excelsa. Sedangkan untuk penggilingan dan roastingnya sendiri, dilakukan di ruang kopi yang ada di Pondok Pesantrin Assalafiyah Annadhliyah.",
+                            "NU Coffee memiliki kebun kopi pribadi yang mengembangkan varian kopi yang cukup langka di pasaran, Excelsa. Sedangkan untuk penggilingan dan roastingnya sendiri, dilakukan di ruang kopi yang ada di Pondok Pesantrin Assalafiyah Annadhliyah.",
                             style: _textStyleCaption2(20, FontWeight.w600)))
                   ],
                 ),
