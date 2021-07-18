@@ -17,7 +17,7 @@ class _FooterPageState extends State<FooterPage> {
       // height: geom.height*0.25,
       height: 200,
       width: geom.width,
-      color: Colors.black87,
+      color: Color.fromRGBO(42, 48, 50, 1),
       padding: EdgeInsets.symmetric(vertical: 24),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 48),
@@ -26,7 +26,7 @@ class _FooterPageState extends State<FooterPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              width: geom.width*0.20,
+              width: geom.width * 0.20,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

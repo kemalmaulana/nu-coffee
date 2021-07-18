@@ -1,17 +1,17 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:nu_coffee/footer_page.dart';
-import 'package:nu_coffee/header_page.dart';
-import 'package:nu_coffee/testimoni_page.dart';
+import 'package:nu_coffee/home/testimoni_page.dart';
+import 'package:nu_coffee/include/footer_page.dart';
+import 'package:nu_coffee/include/header_page.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  _MainPageState createState() => _MainPageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _HomePageState extends State<HomePage> {
   final List<String> imgList = [
     'assets/images/slide_1.jpeg',
     'assets/images/slide_2.jpeg',
@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          HeaderPage(),
+          HeaderPage(activePage: 1),
           carouselSlider(),
           specialityDetail(),
           TestimoniPage(),
@@ -283,14 +283,24 @@ class _MainPageState extends State<MainPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.asset('assets/images/pic_artisan.png', fit: BoxFit.cover, height: 200, width: 300),
-                      Text("ARTISAN", style: TextStyle(
-                          fontFamily: "Franklin",
-                          fontSize: 28
-                      ))
+                      Image.asset('assets/images/pic_artisan.png',
+                          fit: BoxFit.cover, height: 200, width: 300),
+                      Text("ARTISAN",
+                          style:
+                              TextStyle(fontFamily: "Franklin", fontSize: 28))
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/pic_espresso.png',
+                          fit: BoxFit.cover, height: 200, width: 300),
+                      Text("ARTISAN",
+                          style:
+                              TextStyle(fontFamily: "Franklin", fontSize: 28))
                     ],
                   )
-
                 ],
               ),
             ],
