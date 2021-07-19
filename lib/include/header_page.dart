@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nu_coffee/about/about_page.dart';
+import 'package:nu_coffee/contact/contact_us_page.dart';
 import 'package:nu_coffee/home/home_page.dart';
 import 'package:nu_coffee/speciality/speciality_page.dart';
 
@@ -113,11 +114,16 @@ class _HeaderPageState extends State<HeaderPage> {
                                       fontSize: 16)),
                         ),
                         onTap: () {
-                          final snackBar = SnackBar(
-                              content:
-                                  Text('Kontak currently on development...'));
-
-                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                          // final snackBar = SnackBar(
+                          //     content:
+                          //         Text('Kontak currently on development...'));
+                          //
+                          // ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ContactUsPage()),
+                          );
                         }),
                     SizedBox(width: 15),
                     Container(

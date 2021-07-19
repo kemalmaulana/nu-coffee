@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nu_coffee/about/about_page.dart';
+import 'package:nu_coffee/contact/contact_us_page.dart';
 import 'package:nu_coffee/home/home_page.dart';
-import 'package:nu_coffee/speciality/speciality_page.dart';
 
 class FooterPage extends StatefulWidget {
   const FooterPage({Key? key}) : super(key: key);
@@ -78,8 +78,13 @@ class _FooterPageState extends State<FooterPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SpecialityPage()),
+                                builder: (context) => ContactUsPage()),
                           );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //       builder: (context) => SpecialityPage()),
+                          // );
                         },
                       ),
                       InkWell(
