@@ -25,18 +25,6 @@ class SpecialityDetailPage extends StatelessWidget {
     Size geom = MediaQuery.of(context).size;
     return Column(
       children: [
-        // Container(
-        //   height: 150,
-        //   width: geom.width,
-        //   color: Colors.black,
-        //   padding: EdgeInsets.symmetric(vertical: 20),
-        //   child: Center(
-        //       child: Text("ARTISAN COFFEE",
-        //           style: TextStyle(
-        //               color: Colors.white,
-        //               fontFamily: 'Franklin',
-        //               fontSize: 48))),
-        // ),
         Row(
           children: [
             Stack(
@@ -148,17 +136,6 @@ class SpecialityDetailPage extends StatelessWidget {
               ],
             ),
           ],
-        ),
-        Container(
-          height: 150,
-          width: geom.width,
-          color: Colors.black,
-          padding: EdgeInsets.symmetric(vertical: 10),
-          child: Center(
-              child: InkWell(
-                  child: Image.asset("assets/images/pic_order_now.png",
-                      fit: BoxFit.cover),
-                  onTap: () {})),
         ),
       ],
     );
