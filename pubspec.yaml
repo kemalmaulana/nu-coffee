@@ -64,10 +64,13 @@ flutter:
     - family: Franklin
       fonts:
         - asset: assets/fonts/BebasNeue_Regular.otf
-#        - asset: assets/fonts/Franklin_Gothic_Std_Extra_Condensed.otf
+    #        - asset: assets/fonts/Franklin_Gothic_Std_Extra_Condensed.otf
     - family: Avenir
       fonts:
         - asset: assets/fonts/AvenirLTStd_Roman.otf
+    - family: Didot
+      fonts:
+        - asset: assets/fonts/Didot_italic.otf
 
   #   - family: Trajan Pro
   #     fonts:

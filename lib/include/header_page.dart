@@ -33,8 +33,16 @@ class _HeaderPageState extends State<HeaderPage> {
                     // Icon(Icons.ac_unit, color: Colors.white),
                     Padding(
                       padding: const EdgeInsets.only(left: 50),
-                      child: Image.asset("assets/images/logo_kopi_nu.png",
-                          height: 100, width: 100),
+                      child: InkWell(
+                        child: Image.asset("assets/images/logo_kopi_nu.png",
+                            height: 100, width: 100),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
+                      ),
                     ),
                     SizedBox(width: 30),
                     InkWell(

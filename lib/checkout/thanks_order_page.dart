@@ -14,43 +14,50 @@ class ThanksOrderPage extends StatelessWidget {
         child: Column(
           children: [
             HeaderPage(activePage: 0),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: Text("TERIMA KASIH",
-                  style: TextStyle(
-                      fontSize: 32,
-                      fontFamily: "Franklin",
-                      fontWeight: FontWeight.w600)),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: Text("TELAH MENGORDER!",
-                  style: TextStyle(
-                      fontSize: 32,
-                      fontFamily: "Franklin",
-                      fontWeight: FontWeight.w600)),
-            ),
-            Image.asset("assets/images/pic_thanks_for_purchasing.JPG",
-                height: 500, width: geom.width, fit: BoxFit.fitWidth),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
-                },
-                child: Container(
-                    color: Color.fromRGBO(90, 89, 77, 1),
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
-                    child: Text("KEMBALI KE HALAMAN UTAMA",
+            Container(
+              color: Color.fromRGBO(253, 250, 213, 1),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Text("TERIMA KASIH",
                         style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 32,
                             fontFamily: "Franklin",
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white))),
+                            fontWeight: FontWeight.w600)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Text("TELAH MENGORDER!",
+                        style: TextStyle(
+                            fontSize: 32,
+                            fontFamily: "Franklin",
+                            fontWeight: FontWeight.w600)),
+                  ),
+                  Image.asset("assets/images/pic_thanks_for_purchasing.JPG",
+                      height: 500, width: geom.width, fit: BoxFit.fitWidth),
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                        );
+                      },
+                      child: Container(
+                          color: Color.fromRGBO(90, 89, 77, 1),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 32, vertical: 8),
+                          child: Text("KEMBALI KE HALAMAN UTAMA",
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  fontFamily: "Franklin",
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white))),
+                    ),
+                  ),
+                ],
               ),
             ),
             FooterPage()

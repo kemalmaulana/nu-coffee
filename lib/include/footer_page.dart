@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nu_coffee/about/about_page.dart';
 import 'package:nu_coffee/contact/contact_us_page.dart';
 import 'package:nu_coffee/home/home_page.dart';
+import 'package:nu_coffee/speciality/speciality_page.dart';
 
 class FooterPage extends StatefulWidget {
   const FooterPage({Key? key}) : super(key: key);
@@ -78,7 +79,7 @@ class _FooterPageState extends State<FooterPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ContactUsPage()),
+                                builder: (context) => SpecialityPage()),
                           );
                           // Navigator.push(
                           //   context,
@@ -91,11 +92,11 @@ class _FooterPageState extends State<FooterPage> {
                         child: Text("KONTAK",
                             style: _textStyle(14, FontWeight.normal)),
                         onTap: () {
-                          final snackBar = SnackBar(
-                              content:
-                                  Text('Kontak currently on development...'));
-
-                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ContactUsPage()),
+                          );
                         },
                       )
                     ],

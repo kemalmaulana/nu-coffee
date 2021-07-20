@@ -122,7 +122,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: geom.width * 0.50,
                     color: Color.fromRGBO(90, 89, 77, 1),
                     padding: const EdgeInsets.all(8),
-                    child: Text(widget.selectedVariant ?? "",
+                    child: Text(widget.selectedVariant ?? "-",
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
@@ -134,7 +134,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: geom.width * 0.50,
                     color: Color.fromRGBO(90, 89, 77, 1),
                     padding: const EdgeInsets.all(8),
-                    child: Text(widget.selectedRoast ?? "",
+                    child: Text(widget.selectedRoast ?? "-",
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
@@ -146,7 +146,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: geom.width * 0.50,
                     color: Color.fromRGBO(90, 89, 77, 1),
                     padding: const EdgeInsets.all(8),
-                    child: Text(widget.selectedGrind ?? "",
+                    child: Text(widget.selectedGrind ?? "-",
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
@@ -158,7 +158,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: geom.width * 0.50,
                     color: Color.fromRGBO(90, 89, 77, 1),
                     padding: const EdgeInsets.all(8),
-                    child: Text(widget.selectedBerat ?? "",
+                    child: Text(widget.selectedBerat ?? "-",
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
@@ -170,7 +170,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: geom.width * 0.50,
                     color: Color.fromRGBO(90, 89, 77, 1),
                     padding: const EdgeInsets.all(8),
-                    child: Text(widget.selectedTotal ?? "",
+                    child: Text(widget.selectedTotal ?? "-",
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,

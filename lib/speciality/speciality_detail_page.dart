@@ -30,7 +30,7 @@ class SpecialityDetailPage extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/pic_speciality_grind.JPG',
+                  'assets/images/asset_arabica.jpg',
                   fit: BoxFit.cover,
                   height: 720,
                   width: geom.width * 0.33,
@@ -72,7 +72,7 @@ class SpecialityDetailPage extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/pic_speciality_grind.JPG',
+                  'assets/images/asset_robusta.jpg',
                   fit: BoxFit.cover,
                   height: 720,
                   width: geom.width * 0.34,
@@ -105,7 +105,7 @@ class SpecialityDetailPage extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/pic_speciality_grind.JPG',
+                  'assets/images/asset_excelsa.jpg',
                   fit: BoxFit.cover,
                   height: 720,
                   width: geom.width * 0.33,

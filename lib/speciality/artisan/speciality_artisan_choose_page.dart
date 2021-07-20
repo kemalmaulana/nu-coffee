@@ -110,7 +110,11 @@ class _SpecialityArtisanChoosePageState
                           }).toList(),
                           onChanged: (value) {
                             setState(() {
-                              _selectedVariant = value!;
+                              if (value != null && value.isNotEmpty) {
+                                _selectedVariant = value;
+                              } else {
+                                _selectedVariant = "-";
+                              }
                             });
                           },
                         ),
@@ -129,7 +133,7 @@ class _SpecialityArtisanChoosePageState
                   'assets/images/pic_speciality_roast.JPG',
                   fit: BoxFit.cover,
                   height: 720,
-                  width: geom.width * 0.33,
+                  width: geom.width * 0.34,
                 ),
                 Positioned(
                   child: Container(
@@ -187,7 +191,11 @@ class _SpecialityArtisanChoosePageState
                           }).toList(),
                           onChanged: (value) {
                             setState(() {
-                              _selectedRoast = value!;
+                              if (value != null && value.isNotEmpty) {
+                                _selectedRoast = value;
+                              } else {
+                                _selectedRoast = "-";
+                              }
                             });
                           },
                         ),
@@ -203,7 +211,7 @@ class _SpecialityArtisanChoosePageState
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/pic_speciality_grind.JPG',
+                  'assets/images/asset_grinds.jpg',
                   fit: BoxFit.cover,
                   height: 720,
                   width: geom.width * 0.33,
@@ -264,7 +272,11 @@ class _SpecialityArtisanChoosePageState
                           }).toList(),
                           onChanged: (value) {
                             setState(() {
-                              _selectedGrind = value!;
+                              if (value != null && value.isNotEmpty) {
+                                _selectedGrind = value;
+                              } else {
+                                _selectedGrind = "-";
+                              }
                             });
                           },
                         ),
@@ -293,10 +305,18 @@ class _SpecialityArtisanChoosePageState
                       context,
                       MaterialPageRoute(
                           builder: (context) => CheckoutPage(
-                                selectedBeans: null,
-                                selectedVariant: _selectedVariant,
-                                selectedRoast: _selectedRoast,
-                                selectedGrind: _selectedGrind,
+                            selectedBeans: null,
+                                selectedVariant:
+                                    _selectedVariant != "Pilih varian"
+                                        ? _selectedVariant
+                                        : "-",
+                                selectedRoast: _selectedRoast != "Pilih roast"
+                                    ? _selectedRoast
+                                    : "-",
+                                selectedGrind:
+                                    _selectedGrind != "Pilih kualitas grind"
+                                        ? _selectedGrind
+                                        : "-",
                                 selectedBerat: "-",
                                 selectedTotal: "Rp. 0",
                               )),

@@ -51,6 +51,8 @@ class _AboutPageState extends State<AboutPage> {
                               style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                   color: Colors.white,
+                                  fontFamily: "Didot",
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 18)),
                           Divider(height: 12, color: Colors.transparent),
                           Text("TENTANG",
