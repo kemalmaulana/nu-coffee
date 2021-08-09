@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:nu_coffee/home/article/article_page.dart';
+import 'package:nu_coffee/home/coming/coming_soon_page.dart';
 import 'package:nu_coffee/home/testimoni/testimoni_page.dart';
 import 'package:nu_coffee/include/footer_page.dart';
 import 'package:nu_coffee/include/header_page.dart';
@@ -77,20 +79,31 @@ class _HomePageState extends State<HomePage> {
             color: Colors.black54,
             width: 450,
             padding: const EdgeInsets.all(8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  "Pelajari Lebih Lanjut",
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 20, fontFamily: "Avenir"),
-                ),
-                SizedBox(width: 30),
-                Text(">>",
-                    style: TextStyle(color: Colors.yellowAccent, fontSize: 20)),
-                SizedBox(width: 10)
-              ],
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ArticlePage(page: 1)),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    "Pelajari Lebih Lanjut",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: "Avenir"),
+                  ),
+                  SizedBox(width: 30),
+                  Text(">>",
+                      style:
+                          TextStyle(color: Colors.yellowAccent, fontSize: 20)),
+                  SizedBox(width: 10)
+                ],
+              ),
             ),
           )
         ],
@@ -133,20 +146,31 @@ class _HomePageState extends State<HomePage> {
             color: Colors.black54,
             width: 450,
             padding: const EdgeInsets.all(8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  "Belanja Kopi Kami",
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 20, fontFamily: "Avenir"),
-                ),
-                SizedBox(width: 30),
-                Text(">>",
-                    style: TextStyle(color: Colors.yellowAccent, fontSize: 20)),
-                SizedBox(width: 10)
-              ],
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ArticlePage(page: 2)),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    "Belanja Kopi Kami",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: "Avenir"),
+                  ),
+                  SizedBox(width: 30),
+                  Text(">>",
+                      style:
+                          TextStyle(color: Colors.yellowAccent, fontSize: 20)),
+                  SizedBox(width: 10)
+                ],
+              ),
             ),
           )
         ],
@@ -189,20 +213,31 @@ class _HomePageState extends State<HomePage> {
             color: Colors.black54,
             width: 450,
             padding: const EdgeInsets.all(8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  "Pelajari Lebih Lanjut",
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 20, fontFamily: "Avenir"),
-                ),
-                SizedBox(width: 30),
-                Text(">>",
-                    style: TextStyle(color: Colors.yellowAccent, fontSize: 20)),
-                SizedBox(width: 10)
-              ],
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ArticlePage(page: 3)),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    "Pelajari Lebih Lanjut",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: "Avenir"),
+                  ),
+                  SizedBox(width: 30),
+                  Text(">>",
+                      style:
+                          TextStyle(color: Colors.yellowAccent, fontSize: 20)),
+                  SizedBox(width: 10)
+                ],
+              ),
             ),
           )
         ],
@@ -365,41 +400,68 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(width: geom.width * 0.15),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset('assets/images/pic_manual.png',
-                        fit: BoxFit.fill,
-                        height: 200,
-                        width: geom.width * 0.10),
-                    Text("MANUAL",
-                        style: TextStyle(fontFamily: "Franklin", fontSize: 28))
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ComingSoonPage()),
+                    );
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/pic_manual.png',
+                          fit: BoxFit.fill,
+                          height: 200,
+                          width: geom.width * 0.10),
+                      Text("MANUAL",
+                          style:
+                              TextStyle(fontFamily: "Franklin", fontSize: 28))
+                    ],
+                  ),
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset('assets/images/pic_artisan.png',
-                        fit: BoxFit.cover,
-                        height: 200,
-                        width: geom.width * 0.10),
-                    Text("ARTISAN",
-                        style: TextStyle(fontFamily: "Franklin", fontSize: 28))
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ComingSoonPage()),
+                    );
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/pic_artisan.png',
+                          fit: BoxFit.cover,
+                          height: 200,
+                          width: geom.width * 0.10),
+                      Text("ARTISAN",
+                          style:
+                              TextStyle(fontFamily: "Franklin", fontSize: 28))
+                    ],
+                  ),
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset('assets/images/pic_espresso.png',
-                        fit: BoxFit.cover,
-                        height: 200,
-                        width: geom.width * 0.10),
-                    Text("ESPRESSO",
-                        style: TextStyle(fontFamily: "Franklin", fontSize: 28))
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ComingSoonPage()),
+                    );
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/pic_espresso.png',
+                          fit: BoxFit.cover,
+                          height: 200,
+                          width: geom.width * 0.10),
+                      Text("ESPRESSO",
+                          style:
+                              TextStyle(fontFamily: "Franklin", fontSize: 28))
+                    ],
+                  ),
                 )
               ],
             ),
