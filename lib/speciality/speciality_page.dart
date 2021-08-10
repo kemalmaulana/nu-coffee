@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nu_coffee/home/coming/coming_soon_page.dart';
 import 'package:nu_coffee/include/footer_page.dart';
 import 'package:nu_coffee/include/header_page.dart';
 import 'package:nu_coffee/speciality/artisan/speciality_artisan_choose_page.dart';
@@ -92,19 +93,28 @@ class _SpecialityPageState extends State<SpecialityPage> {
                   width: geom.width * 0.5,
                 ),
                 Positioned(
-                  child: Container(
-                    color: Colors.black54,
-                    width: 400,
-                    padding: const EdgeInsets.all(40),
-                    child: Center(
-                      child: Text("MANUAL BREW",
-                          style: TextStyle(
-                              fontFamily: "Franklin",
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 0.88,
-                              color: Colors.white,
-                              fontSize: 72)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ComingSoonPage()),
+                      );
+                    },
+                    child: Container(
+                      color: Colors.black54,
+                      width: 400,
+                      padding: const EdgeInsets.all(40),
+                      child: Center(
+                        child: Text("MANUAL BREW",
+                            style: TextStyle(
+                                fontFamily: "Franklin",
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 0.88,
+                                color: Colors.white,
+                                fontSize: 72)),
+                      ),
                     ),
                   ),
                   bottom: 50,
